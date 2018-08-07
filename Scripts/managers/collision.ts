@@ -6,7 +6,7 @@ namespace managers {
     ): Boolean {
       let P1 = new math.Vec2(object1.x, object1.y);
       let P2 = new math.Vec2(object2.x, object2.y);
-      let thunderSound = createjs.Sound.play("thunder");
+      //let thunderSound = createjs.Sound.play("thunder");
 
       if (
         math.Vec2.Distance(P1, P2) <
@@ -28,7 +28,9 @@ namespace managers {
               break;
             
             case "red_fish":
-              thunderSound.volume = 0.2;
+            let lifeSound3 = createjs.Sound.play("lifeSound");
+
+              lifeSound3.volume = 0.2;
               managers.Game.ScoreBoard.Score += 100;
               break;
           

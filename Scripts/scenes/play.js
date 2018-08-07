@@ -96,6 +96,7 @@ var scenes;
                         _this._shark.Reset();
                         _this.num += 1;
                         _this.removeChildAt(_this._shark.x);
+                        managers.Game.ScoreBoard.Score += 200;
                         //   reset and remove bullet
                         _this._removeCurrentBullet(bullet);
                     }

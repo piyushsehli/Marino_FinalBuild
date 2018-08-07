@@ -97,9 +97,7 @@ namespace scenes {
   
       // public methods
       public Start(): void {
-        this.engineSound = createjs.Sound.play("background");
-        this.engineSound.loop = -1;
-        this.engineSound.volume = 0.1;
+        
   
         this._yellowSeahorse = new objects.SeaHorse_yellow();
   
@@ -186,7 +184,7 @@ namespace scenes {
           }
         });
   
-        if(this.num<5 && this.num>=0){
+        if(this.num<15 && this.num>=0){
   
         
         this._shark.forEach(fish => {
@@ -218,6 +216,7 @@ namespace scenes {
                 // reset and remove enemy
                 enemy.Reset();
                 this.num+=1;
+                managers.Game.ScoreBoard.Score+=200;
                 this.removeChildAt(enemy.x);
   
                 //   reset and remove bullet
@@ -241,7 +240,7 @@ namespace scenes {
                 // reset and remove enemy
                 this._enemy.Reset();
                 this.enemyNum+=1;
-                console.log("enemy collide"+this.enemyNum);
+                managers.Game.ScoreBoard.Score+=300;
                 this._removeCurrentBullet(bullet);
               }
             }

@@ -70,9 +70,6 @@ var scenes;
         };
         // public methods
         PlayLevel2.prototype.Start = function () {
-            this.engineSound = createjs.Sound.play("background");
-            this.engineSound.loop = -1;
-            this.engineSound.volume = 0.1;
             this._yellowSeahorse = new objects.SeaHorse_yellow();
             this._ocean = new objects.Ocean();
             // creates an empty array of type Cloud
@@ -142,7 +139,7 @@ var scenes;
                     console.log("collision");
                 }
             });
-            if (this.num < 5 && this.num >= 0) {
+            if (this.num < 15 && this.num >= 0) {
                 this._shark.forEach(function (fish) {
                     fish.Update();
                     if (managers.Collision.check(_this._yellowSeahorse, fish)) {
@@ -171,6 +168,7 @@ var scenes;
                             // reset and remove enemy
                             enemy.Reset();
                             _this.num += 1;
+                            managers.Game.ScoreBoard.Score += 200;
                             _this.removeChildAt(enemy.x);
                             //   reset and remove bullet
                             _this._removeCurrentBullet(bullet);
@@ -192,7 +190,7 @@ var scenes;
                             // reset and remove enemy
                             _this._enemy.Reset();
                             _this.enemyNum += 1;
-                            console.log("enemy collide" + _this.enemyNum);
+                            managers.Game.ScoreBoard.Score += 300;
                             _this._removeCurrentBullet(bullet);
                         }
                     }

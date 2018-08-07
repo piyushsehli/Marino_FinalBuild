@@ -115,6 +115,7 @@ module scenes {
                   this._shark.Reset();
                   this.num+=1;
                   this.removeChildAt(this._shark.x);
+                  managers.Game.ScoreBoard.Score+=200;
     
                   //   reset and remove bullet
                   this._removeCurrentBullet(bullet);
