@@ -10,7 +10,7 @@
     var ScoreBoard;
     var Manifest = [
         { id: "StartButton", src: "/Assets/images/play.png" },
-        { id: "SettingButton", src: "/Assets/images/setting.png" },
+        { id: "SettingButton", src: "/Assets/images/info.png" },
         { id: "BackButton", src: "/Assets/images/BackButton.png" },
         { id: "CancelButton", src: "/Assets/images/cancel.png" },
         { id: "InfoButton", src: "/Assets/images/info.png" },
@@ -95,6 +95,9 @@
                 break;
             case config.Scene.LEVEL3:
                 CurrentScene = new scenes.Level3();
+                break;
+            case config.Scene.RULES:
+                CurrentScene = new scenes.Rules();
                 break;
             case config.Scene.END:
                 CurrentScene = new scenes.End();

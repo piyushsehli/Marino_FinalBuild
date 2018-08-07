@@ -6,7 +6,7 @@ var managers;
         Collision.check = function (object1, object2) {
             var P1 = new math.Vec2(object1.x, object1.y);
             var P2 = new math.Vec2(object2.x, object2.y);
-            //let thunderSound = createjs.Sound.play("thunder");
+            var thunderSound = createjs.Sound.play("thunder");
             if (math.Vec2.Distance(P1, P2) <
                 object1.halfHeight + object2.halfHeight) {
                 if (!object2.isColliding) {
@@ -17,24 +17,22 @@ var managers;
                             yaySound.volume = 0.2;
                             managers.Game.ScoreBoard.Lives -= 1;
                             break;
-                        /*case "red_fish":
-                        case "orange_fish":
-                        case "green_fish":*/
                         case "purple_fish":
                             //thunderSound.volume = 0.2;
                             managers.Game.ScoreBoard.Score += 100;
                             break;
                         case "red_fish":
-                            //thunderSound.volume = 0.2;
+                            thunderSound.volume = 0.2;
                             managers.Game.ScoreBoard.Score += 100;
                             break;
                         case "bonus":
-                            //thunderSound.volume = 0.2;
+                            var lifeSound2 = createjs.Sound.play("lifeSound");
+                            lifeSound2.volume = 0.2;
                             managers.Game.ScoreBoard.Score += 500;
                             break;
                         case "life":
                             var lifeSound = createjs.Sound.play("lifeSound");
-                            //thunderSound.volume = 0.2;
+                            lifeSound.volume = 0.2;
                             managers.Game.ScoreBoard.Lives += 1;
                             break;
                         case "bullet":

@@ -8,6 +8,7 @@ module config {
         PLAYLEVEL1,
         PLAYLEVEL2,
         LEVEL2,
-        LEVEL3
+        LEVEL3,
+        RULES
     }
 }

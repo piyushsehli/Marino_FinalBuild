@@ -21,9 +21,10 @@ var scenes;
         // private methods
         // public methods
         Setting.prototype.Start = function () {
-            this._cancleButton = new objects.Button("CancelButton", 0, 0, false);
-            this._avtarButton = new objects.Button("avtarButton", 350, 100, false);
-            this._rulesButton = new objects.Button("rulesButton", 350, 300, false);
+            this._cancleButton = new objects.Button("CancelButton", config.Screen.HALF_WIDTH, 510, false);
+            this._welcomeLabel = new objects.Label("1. Tap to Shoot\n\n2. Kill 15 Shark to reach at Next Level." +
+                "\n\n3. Eat snail to increase live\n\n4. Kill octopus to reach at Next Level.\n\n" +
+                "5. Eat star fish to get bonus.\n\n6. Kill water gragen to win.\n\n7. Eat Red-fish to collect point", "20px", "Consolas", "#660066", 500, 320, true);
             this._ocean = new objects.Ocean();
             this.Main();
         };
@@ -38,8 +39,7 @@ var scenes;
             console.log("Starting - Setting SCENE");
             this.addChild(this._ocean);
             this.addChild(this._cancleButton);
-            this.addChild(this._rulesButton);
-            this.addChild(this._avtarButton);
+            this.addChild(this._welcomeLabel);
             this._cancleButton.on("click", function () {
                 managers.Game.CurrentState = config.Scene.START;
                 var button = createjs.Sound.play("button");

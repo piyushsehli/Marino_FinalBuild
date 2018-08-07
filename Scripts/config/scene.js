@@ -11,6 +11,7 @@ var config;
         Scene[Scene["PLAYLEVEL2"] = 6] = "PLAYLEVEL2";
         Scene[Scene["LEVEL2"] = 7] = "LEVEL2";
         Scene[Scene["LEVEL3"] = 8] = "LEVEL3";
+        Scene[Scene["RULES"] = 9] = "RULES";
     })(Scene = config.Scene || (config.Scene = {}));
 })(config || (config = {}));
 //# sourceMappingURL=scene.js.map
