@@ -184,7 +184,7 @@ namespace scenes {
           }
         });
   
-        if(this.num<15 && this.num>=0){
+        if(this.num<8 && this.num>=0){
   
         
         this._shark.forEach(fish => {
@@ -303,6 +303,8 @@ namespace scenes {
             bullet.x = this._yellowSeahorse.x+15;
             this._bulletClicked.push(bullet);
             this.addChild(bullet);
+            let bulletSound = createjs.Sound.play("bulletsound");
+              bulletSound.volume = 0.2;
           },
           this
         );

@@ -5,6 +5,7 @@ namespace scenes {
     private _wonLabel: objects.Label;
     private _backButton: objects.Button;
     private _ocean: objects.Ocean;
+    private _message="";
     // constructors
     constructor() {
       super();
@@ -16,8 +17,13 @@ namespace scenes {
 
     // public methods
     public Start(): void {
+      if(managers.Game.ScoreBoard.Lives>=1){
+        this._message = "You  won the game!";
+      }else{
+        this._message = "Game Over!";
+      }
       this._endLabel = new objects.Label(
-        "Game Over!",
+        this._message,
         "60px",
         "Consolas",
         "#000000",
@@ -25,7 +31,7 @@ namespace scenes {
         200,
         true
       );
-      this._backButton = new objects.Button("BackButton", 320, 400, true);
+      this._backButton = new objects.Button("BackButton", config.Screen.HALF_WIDTH, config.Screen.HALF_HEIGHT+100, true);
       this._ocean = new objects.Ocean();
       this.Main();
     }

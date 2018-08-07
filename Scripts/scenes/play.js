@@ -61,7 +61,7 @@ var scenes;
                     console.log("collision");
                 }
             });
-            if (this.num < 5 && this.num >= 0) {
+            if (this.num < 8 && this.num >= 0) {
                 //this._shark.forEach(fish => {
                 this._shark.Update();
                 if (managers.Collision.check(this._seahorse, this._shark)) {
@@ -128,6 +128,8 @@ var scenes;
                 bullet.x = this._seahorse.x + 15;
                 this._bulletClicked.push(bullet);
                 this.addChild(bullet);
+                var bulletSound = createjs.Sound.play("bulletsound");
+                bulletSound.volume = 0.2;
             }, this);
             this.addChild(this._seahorseMessage);
             this.addChild(managers.Game.ScoreBoard.LivesLabel);

@@ -124,7 +124,7 @@ var scenes;
                     console.log("collision");
                 }
             });
-            if (this.num < 15 && this.num >= 0) {
+            if (this.num < 8 && this.num >= 0) {
                 this._shark.forEach(function (fish) {
                     fish.Update();
                     if (managers.Collision.check(_this._yellowSeahorse, fish)) {
@@ -229,6 +229,8 @@ var scenes;
                 bullet.x = this._yellowSeahorse.x + 15;
                 this._bulletClicked.push(bullet);
                 this.addChild(bullet);
+                var bulletSound = createjs.Sound.play("bulletsound");
+                bulletSound.volume = 0.2;
             }, this);
             this.addChild(managers.Game.ScoreBoard.LivesLabel);
             this.addChild(managers.Game.ScoreBoard.ScoreLabel);

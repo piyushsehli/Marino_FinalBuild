@@ -15,14 +15,21 @@ var scenes;
         // constructors
         function End() {
             var _this = _super.call(this) || this;
+            _this._message = "";
             _this.Start();
             return _this;
         }
         // private methods
         // public methods
         End.prototype.Start = function () {
-            this._endLabel = new objects.Label("Game Over!", "60px", "Consolas", "#000000", config.Screen.HALF_WIDTH, 200, true);
-            this._backButton = new objects.Button("BackButton", 320, 400, true);
+            if (managers.Game.ScoreBoard.Lives >= 1) {
+                this._message = "You  won the game!";
+            }
+            else {
+                this._message = "Game Over!";
+            }
+            this._endLabel = new objects.Label(this._message, "60px", "Consolas", "#000000", config.Screen.HALF_WIDTH, 200, true);
+            this._backButton = new objects.Button("BackButton", config.Screen.HALF_WIDTH, config.Screen.HALF_HEIGHT + 100, true);
             this._ocean = new objects.Ocean();
             this.Main();
         };

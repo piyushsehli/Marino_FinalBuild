@@ -19,7 +19,7 @@ namespace scenes {
     public Start(): void {
       this._cancleButton = new objects.Button("CancelButton", config.Screen.HALF_WIDTH, 510, false);
       this._welcomeLabel = new objects.Label(
-        "1. Tap to Shoot\n\n2. Kill 15 Shark to reach at Next Level."+
+        "1. Tap to Shoot\n\n2. Kill some Shark to reach at Next Level."+
         "\n\n3. Eat snail to increase live\n\n4. Kill octopus to reach at Next Level.\n\n"+
         "5. Eat star fish to get bonus.\n\n6. Kill water gragen to win.\n\n7. Eat Red-fish to collect point",
         "20px",
