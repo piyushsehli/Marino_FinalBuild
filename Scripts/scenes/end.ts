@@ -2,6 +2,7 @@ namespace scenes {
   export class End extends objects.Scene {
     // member variables
     private _endLabel: objects.Label;
+    private _wonLabel: objects.Label;
     private _backButton: objects.Button;
     private _ocean: objects.Ocean;
     // constructors

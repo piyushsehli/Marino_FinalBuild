@@ -75,7 +75,7 @@ var scenes;
                 //this._shark.forEach(shark => {
                 //this.removeChild(this._shark);
                 //alert("next level");
-                managers.Game.CurrentState = config.Scene.PLAYLEVEL1;
+                managers.Game.CurrentState = config.Scene.LEVEL2;
                 //}); 
                 //this.addChild(this._enemy);
             }

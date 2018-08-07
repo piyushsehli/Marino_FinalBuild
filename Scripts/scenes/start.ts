@@ -30,21 +30,21 @@ namespace scenes {
         "80px",
         "Consolas",
         "#660066",
-        440,
+        500,
         120,
         true
       );
       this._welcomeLabelby = new objects.Label(
-        "- Tidal Wave ",
+        "Tidal Wave ",
         "48px",
         "Consolas",
         "#ff0066",
-        420,
+        500,
         240,
         true
       );
-      this._startButton = new objects.Button("StartButton", 320, 400, true);
-      this._settingButton = new objects.Button("SettingButton", 710, 550, true);
+      this._startButton = new objects.Button("StartButton", 400, 400, true);
+      this._settingButton = new objects.Button("SettingButton", 910, 550, true);
       this._infoButton = new objects.Button("InfoButton", 0, 550, true);
       this._ocean = new objects.Ocean();
       this.Main();

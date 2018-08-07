@@ -90,6 +90,12 @@
             case config.Scene.PLAYLEVEL2:
                 CurrentScene = new scenes.PlayLevel2();
                 break;
+            case config.Scene.LEVEL2:
+                CurrentScene = new scenes.Level2();
+                break;
+            case config.Scene.LEVEL3:
+                CurrentScene = new scenes.Level3();
+                break;
             case config.Scene.END:
                 CurrentScene = new scenes.End();
                 break;

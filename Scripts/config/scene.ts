@@ -6,6 +6,8 @@ module config {
         SETTING,
         INFORMATION,
         PLAYLEVEL1,
-        PLAYLEVEL2
+        PLAYLEVEL2,
+        LEVEL2,
+        LEVEL3
     }
 }

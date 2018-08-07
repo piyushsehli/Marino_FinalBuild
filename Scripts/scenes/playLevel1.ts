@@ -233,7 +233,7 @@ namespace scenes {
             }
           }
           else{
-            managers.Game.CurrentState = config.Scene.PLAYLEVEL2;
+            managers.Game.CurrentState = config.Scene.LEVEL3;
           }
           //});
         }

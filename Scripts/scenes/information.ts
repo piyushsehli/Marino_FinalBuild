@@ -22,7 +22,7 @@ namespace scenes {
 
     // public methods
     public Start(): void {
-      this._backButton = new objects.Button("BackButton", 360, 560, true);
+      this._backButton = new objects.Button("BackButton", config.Screen.HALF_WIDTH, 560, true);
       this._infoLabel = new objects.Label(
         "Marino",
         "60px",
@@ -37,7 +37,7 @@ namespace scenes {
         "40px",
         "Consolas",
         " #ff0066",
-        400,
+        config.Screen.HALF_WIDTH,
         140,
         true
       );
@@ -46,7 +46,7 @@ namespace scenes {
         "30px",
         "Consolas",
         "#000066",
-        400,
+        config.Screen.HALF_WIDTH,
         180,
         true
       );
@@ -54,26 +54,26 @@ namespace scenes {
         "Developers -",
         "40px",
         "Consolas",
-        " #ff0066",
-        400,
+        "#ff0066",
+        config.Screen.HALF_WIDTH,
         230,
         true
       );
       this._infoLabel4 = new objects.Label(
-        "   Chandni Patel - 300990555 \n\nKhushboo Sakervala - 300984318 \n\n   Piyush Sehli: 300984528\n\n",
+        "Chandni Patel - 300990555 \n\nKhushboo Sakervala - 300984318 \n\n   Piyush Sehli - 300984528\n\n",
         "30px",
         "Consolas",
         "#000066",
-        400,
+        config.Screen.HALF_WIDTH,
         340,
         true
       );
       this._infoLabel5 = new objects.Label(
-        "Guided By -",
+        "Guided By",
         "40px",
         "Consolas",
-        " #ff0066",
-        400,
+        "#ff0066",
+        config.Screen.HALF_WIDTH,
         410,
         true
       );
@@ -82,7 +82,7 @@ namespace scenes {
         "35px",
         "Consolas",
         "#000066",
-        380,
+        config.Screen.HALF_WIDTH,
         460,
         true
       );
